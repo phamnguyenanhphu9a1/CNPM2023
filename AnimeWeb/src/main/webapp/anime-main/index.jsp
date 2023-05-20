@@ -908,6 +908,42 @@
         });
     })
 </script>
+<script>
+
+    function searchByName(input) {
+        let searchBox = $('#search-input').val();
+       if(searchBox.length>0){
+           $.ajax({
+               url: "SearchByName",
+               type: "GET",
+               data: {
+                   searchBox: searchBox,
+               },
+               success: function (data) {
+                   let jsonData = JSON.parse(data);
+                   // Render dữ liệu lên trang web
+                   let html = '';
+                   for (let i = 0; i < jsonData.length; i++) {
+                       html += '<li class="result-input"><a href="MovieDetail?idMovie='+jsonData[i].id+'">' + jsonData[i].name +
+                           '<img src="' + jsonData[i].avatars[0].name + '"/></a></li>'
+
+                   }
+                   $('#search-results').html(html);
+
+               },
+               error: function () {
+                   // Xử lý lỗi khi không lấy được dữ liệu
+                   alert('Không lấy được dữ liệu');
+               }
+           });
+       }else{
+           $('#search-results').html("");
+       }
+
+    }
+
+
+</script>
 
 </body>
 
