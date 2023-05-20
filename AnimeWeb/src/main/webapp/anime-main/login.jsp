@@ -309,12 +309,36 @@
 								<fmt:message>button.login</fmt:message>
 							</button> <!-- 2.1.4 submit form -->
 						</form>
+
 						<br>
 						<div style="color: red">${requestScope.error}</div> <!-- hiển thị lỗi -->
 
 					</div>
-				</div>
 
+				</div>
+				<div class="col-lg-6">
+					<div class="login__register">
+						<h3>Dont’t Have An Account?</h3>
+						<a href="#" class="primary-btn">Register Now</a>
+						<div class="login__social">
+							<div class="row d-flex justify-content-center">
+								<div class="col-lg-6">
+									<div class="login__social__links">
+										<span>or</span>
+										<ul>
+											<li><a href="#" class="facebook"><i class="fa fa-facebook"></i> Sign in With
+												Facebook</a></li>
+											<li><a href="#" class="google"><i class="fa fa-google"></i> Sign in With Google</a></li>
+											<li><a href="#" class="twitter"><i class="fa fa-twitter"></i> Sign in With Twitter</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
 			</div>
 
 		</div>
