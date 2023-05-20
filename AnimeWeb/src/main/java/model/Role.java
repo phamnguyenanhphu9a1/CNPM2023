@@ -2,9 +2,7 @@ package model;
 
 import javax.security.auth.Subject;
 import java.security.Principal;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Role {
 	private int id;
@@ -42,4 +40,7 @@ public class Role {
 				", description='" + description + '\'' +
 				'}';
 	}
+
+	public static void main(String[] args) {
+		}
 }
